@@ -149,7 +149,7 @@ button:focus-visible {
 	display: flex; 
 	align-items: center; 
 	justify-content: space-between; 
-	border-bottom: 1px solid var(--line); 
+	border-bottom: 5px solid var(--line); 
 }
 
 .brand { 
@@ -208,9 +208,9 @@ button:focus-visible {
 	transform: translateY(-2px); 
 }
 
-/* Secondary Button Styles (Exact same size/font, darker contrasting color) */
+/* Secondary Button Styles */
 .button-secondary {
-display: inline-flex; 
+	display: inline-flex; 
 	align-items: center; 
 	justify-content: center; 
 	gap: 12px; 
@@ -224,7 +224,6 @@ display: inline-flex;
 	background: var(--green); 
 	color: #07121a; 
 }
-
 
 .button-secondary:hover {
 	background: #a0ffe9; 
@@ -304,13 +303,17 @@ footer {
 	text-align: center; 
 }
 
+/* Flexible Centered Layout for Projects */
 .projects { 
-	display: grid; 
-	grid-template-columns: repeat(2, 1fr); 
-	gap: 18px; 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+	gap: 20px; 
 }
 
 .project { 
+	flex: 1 1 480px;
+	max-width: 540px;
 	min-height: 330px; 
 	padding: 27px; 
 	display: flex; 
@@ -411,59 +414,108 @@ footer {
 	flex-direction: column; 
 	align-items: center; 
 	text-align: center; 
-	gap: 40px; 
+}
+
+#about .about-heading { 
+	margin-bottom: 28px; 
 }
 
 #about .about-copy { 
-	max-width: 680px; 
+	max-width: 640px; 
+}
+
+#about .about-lead { 
+	margin: 0 0 20px; 
+	color: var(--ink); 
+	font-size: clamp(20px, 2.6vw, 26px); 
+	font-weight: 500; 
+	letter-spacing: -.025em; 
+	line-height: 1.4; 
+	text-wrap: balance; 
+}
+
+#about .about-copy p:not(.about-lead) { 
+	max-width: 520px; 
+	margin: 0 auto; 
 	color: var(--muted); 
-	font-size: 15px; 
-	text-align: center; 
+	font-size: 16px; 
+	line-height: 1.75; 
+	text-wrap: pretty; 
 }
 
-#about .about-copy p { 
-	margin: 0 auto 18px; 
+#about .stack-title { 
+	display: flex; 
+	align-items: center; 
+	gap: 20px; 
+	width: 100%; 
+	max-width: 960px; 
+	margin: 64px 0 28px; 
+	color: var(--green); 
+	font-size: 22px; 
+	font-weight: 500; 
+	white-space: nowrap; 
 }
 
+#about .stack-title::before, 
+#about .stack-title::after { 
+	content: ""; 
+	flex: 1; 
+	height: 1px; 
+	background: var(--line); 
+}
+
+/* Responsive Skills Flexbox Layout */
 .skills { 
-	display: grid; 
-	grid-template-columns: repeat(2, 1fr); 
-	gap: 0 32px; 
-	margin-top: 29px; 
-	border-top: 1px solid var(--line); 
-	text-align: left; 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+	gap: 20px; 
+	width: 100%; 
+	max-width: 960px; 
 }
 
 .skill { 
-	padding: 15px 0; 
-	border-bottom: 1px solid var(--line); 
+	flex: 1 1 280px; 
+	max-width: 292px; 
+	padding: 22px 20px; 
+	border: 1px solid var(--line); 
+	border-radius: 8px; 
+	background: linear-gradient(145deg, rgba(17, 27, 43, .8), rgba(12, 19, 31, .8)); 
+	text-align: left; 
 }
-
+ 
 .skill strong { 
 	display: block; 
+	margin-bottom: 14px; 
 	color: var(--ink); 
 	font-size: 14px; 
 }
-
-.skill span { 
-	color: var(--muted); 
-	font-size: 12px; 
+ 
+.skill-tools { 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: flex-start; 
+	gap: 6px; 
 }
 
 
 /* ==========================================
-   7. CONTACT SECTION (#contact)
+   7. CONTACT SECTION (#contact) - includes social links
    ========================================== */
 .contact { 
 	margin-bottom: 48px; 
+	overflow: hidden; 
+	border: 1px solid rgba(98, 240, 210, .2); 
+	border-radius: 8px; 
+	background: radial-gradient(ellipse at 95% 0, rgba(52, 117, 152, .2), transparent 48%), #101827; 
+}
+
+.contact-main { 
 	padding: 55px 58px; 
 	display: flex; 
 	justify-content: space-between; 
 	align-items: center; 
 	gap: 30px; 
-	border: 1px solid rgba(98, 240, 210, .2); 
-	border-radius: 8px; 
-	background: radial-gradient(ellipse at 95% 0, rgba(52, 117, 152, .2), transparent 48%), #101827; 
 }
 
 .contact h2 { 
@@ -471,7 +523,7 @@ footer {
 	font-size: clamp(32px, 4vw, 49px); 
 }
 
-.contact p { 
+.contact-copy p:not(.section-label) { 
 	margin: 13px 0 0; 
 	color: var(--muted); 
 	font-size: 15px; 
@@ -479,6 +531,73 @@ footer {
 
 .contact .button { 
 	flex: 0 0 auto; 
+	max-width: 100%; 
+	overflow-wrap: anywhere; 
+	text-align: center; 
+}
+
+/* Social strip: lives inside the contact box, separated by a hairline */
+.contact-social { 
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+	gap: 20px; 
+	padding: 22px 58px; 
+	border-top: 1px solid rgba(98, 240, 210, .15); 
+	background: rgba(8, 13, 24, .35); 
+}
+
+.contact-social .contact-social-label { 
+	margin: 0; 
+	color: var(--muted); 
+	font-size: 13px; 
+}
+
+.social-links { 
+	display: flex; 
+	gap: 12px; 
+}
+
+.social-link { 
+	display: inline-flex; 
+	align-items: center; 
+	justify-content: center; 
+	gap: 8px; 
+	padding: 9px 16px; 
+	border: 1px solid rgba(98, 240, 210, .35); 
+	border-radius: 6px; 
+	color: var(--green); 
+	font-size: 13px; 
+	font-weight: 750; 
+	transition: background .2s, border-color .2s, transform .2s; 
+}
+
+.social-link:hover { 
+	background: rgba(98, 240, 210, .08); 
+	border-color: var(--green); 
+	transform: translateY(-2px); 
+}
+
+
+/* Desktop only: tighter, larger social strip (mobile layout unchanged) */
+@media (min-width: 761px) {
+	.contact-social { 
+		justify-content: center; 
+		gap: 32px; 
+		padding-block: 28px; 
+	}
+	.contact-social .contact-social-label { 
+		font-size: 22.75px; 
+	}
+	.social-links { 
+		gap: 16px; 
+	}
+	.social-link { 
+		gap: 12px; 
+		padding: 13.5px 24px; 
+		border-radius: 9px; 
+		font-size: 19.5px; 
+	}
 }
 
 
@@ -507,12 +626,31 @@ footer {
 		padding-block: 60px; 
 	}
 	.projects { 
-		grid-template-columns: 1fr; 
-	}
-	.contact { 
-		padding: 34px 24px; 
-		align-items: flex-start; 
 		flex-direction: column; 
+		align-items: center; 
+	}
+	.project { 
+		max-width: 100%; 
+	}
+	.contact-main { 
+		padding: 34px 24px; 
+		flex-direction: column; 
+		align-items: center; 
+		text-align: center; 
+	}
+	.contact .button { 
+		width: 100%; 
+	}
+	.contact-social { 
+		padding: 20px 24px; 
+		flex-direction: column; 
+		gap: 14px; 
+	}
+	.social-links { 
+		width: 100%; 
+	}
+	.social-link { 
+		flex: 1; 
 	}
 	footer { 
 		min-height: 90px; 
@@ -523,7 +661,12 @@ footer {
 
 @media (max-width: 480px) {
 	.skills { 
-		grid-template-columns: 1fr; 
+		flex-direction: column; 
+		align-items: stretch; 
+	}
+	.skill { 
+		flex: 0 0 auto; 
+		max-width: 100%; 
 	}
 	.actions { 
 		flex-direction: column; 

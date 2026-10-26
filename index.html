@@ -12,7 +12,7 @@
 	<a class="skip-link" href="#main-content">Skip to main content</a>
 
 	<header class="wrap topbar">
-		<a class="brand" href="#home" aria-label="Caterina Smith home">Caterina Smith<span></span></a>
+		<a class="brand" href="#home" aria-label="Caterina Smith home"><span></span></a>
 		<nav class="nav" aria-label="Main navigation">
 			<a href="#work">Selected work</a>
 			<a href="#about">About</a>
@@ -23,7 +23,8 @@
 	<main id="main-content">
 		<section class="wrap hero" id="home" aria-label="Introduction">
 			<div>
-				<p class="eyebrow">Data analyst</p>
+				<div>Caterina Smith</div>
+				<div class="eyebrow">Data analyst</div>
 				<h2>Bridging the gap between raw data <br> and business strategy</h2>
 				<p class="intro">I uncover the story behind the data - turning messy datasets into clear stories and practical strategies.</p>
 				<div class="actions">
@@ -70,60 +71,93 @@
 			</div>
 		</section>
 
-		<section class="section" id="about" aria-label="About Me">
+		<section class="section" id="about" aria-labelledby="about-title">
 			<div class="wrap about-grid">
-				<div>
-					<p class="section-label">A little about me</p>
-					<h2>Curious by nature.</h2>
+				<div class="about-heading">
+					<p class="section-label" id="about-title">About</p>
 				</div>
+
 				<div class="about-copy">
-					<p>I am Caterina, a data analyst who believes the best analysis doesn’t end with just a chart.</p>
-					<p>My financial background combined with my psychological insights make me curious to find the root cause of an issue.</p>
-					<p>What caused the metric to shift?</p>
-					<p>While standard analytics can show you what happened, I uncover why it happened—decoding the data to connect numbers, consumer behavior, and financial impact to help business stakeholders turn data into growth-driving strategies.</p>
-					
-					<div class="skills" aria-label="Skills and tools">
-						<div class="skill">
-							<strong>Data Analysis &amp; Visualization</strong>
-							<span>SQL · Excel · Tableau · Python · Statistics · AI-driven EDA · Synthetic Data Generation</span>
+					<p class="about-lead">Hi, I’m Caterina, a data analyst who believes the best analysis doesn’t end with a chart.</p>
+					<p>My business analysis, financial background, and psychological insight make me curious about the root cause of any issue.</p>
+				</div>
+
+				<h3 class="stack-title">My Tech Stack</h3>
+
+				<div class="skills" aria-label="Skills and tools">
+					<div class="skill">
+						<strong>Data Analysis &amp; Visualization</strong>
+						<div class="skill-tools">
+							<span class="tag">SQL</span>
+							<span class="tag">Excel</span>
+							<span class="tag">Tableau</span>
+							<span class="tag">Python</span>
+							<span class="tag">Statistics</span>
+							<span class="tag">AI-driven EDA</span>
+							<span class="tag">Synthetic Data Generation</span>
 						</div>
-						<div class="skill">
-							<strong>Business &amp; Website Analysis</strong>
-							<span>QuickBooks · Shopify Analytics · Google Analytics</span>
+					</div>
+					<div class="skill">
+						<strong>Business &amp; Website Analysis</strong>
+						<div class="skill-tools">
+							<span class="tag">QuickBooks</span>
+							<span class="tag">Shopify Analytics</span>
+							<span class="tag">Google Analytics</span>
 						</div>
-						<div class="skill">
-							<strong>Design &amp; Digital Product</strong>
-							<span>UX Design · Website Design · Canva · Krita</span>
+					</div>
+					<div class="skill">
+						<strong>Design &amp; Digital Product</strong>
+						<div class="skill-tools">
+							<span class="tag">UX Design</span>
+							<span class="tag">Website Design</span>
+							<span class="tag">Canva</span>
+							<span class="tag">Krita</span>
 						</div>
-						<div class="skill">
-							<strong>AI Integration &amp; Development</strong>
-							<span>Prompt Engineering · Lovable · Workflow Automation</span>
+					</div>
+					<div class="skill">
+						<strong>AI Integration &amp; Development</strong>
+						<div class="skill-tools">
+							<span class="tag">Prompt Engineering</span>
+							<span class="tag">Lovable</span>
+							<span class="tag">Workflow Automation</span>
 						</div>
-						<div class="skill">
-							<strong>AI &amp; LLM Tools</strong>
-							<span>ChatGPT · Claude · Perplexity · Gemini · Copilot</span>
+					</div>
+					<div class="skill">
+						<strong>AI &amp; LLM Tools</strong>
+						<div class="skill-tools">
+							<span class="tag">ChatGPT</span>
+							<span class="tag">Claude</span>
+							<span class="tag">Perplexity</span>
+							<span class="tag">Gemini</span>
+							<span class="tag">Copilot</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="wrap contact" id="contact" aria-label="Contact Section">
-			<div>
-				<p class="section-label">Have a question?</p>
-				<h2>Let’s decode the data.</h2>
-				<p>Open to new opportunities and collaborations.</p>
+		<section class="wrap contact" id="contact" aria-labelledby="contact-title">
+			<div class="contact-main">
+				<div class="contact-copy">
+					<p class="section-label">Have a question?</p>
+					<h2 id="contact-title">Let’s decode the data.</h2>
+					<p>Open to new opportunities and collaborations.</p>
+				</div>
+				<a class="button" href="mailto:CaterinaSmith.ultra@gmail.com">CaterinaSmith.ultra@gmail.com <span aria-hidden="true">↗</span></a>
 			</div>
-			<a class="button" href="mailto:CaterinaSmith.ultra@gmail.com">CaterinaSmith.ultra@gmail.com <span aria-hidden="true">↗</span></a>
+			<div class="contact-social">
+				<p class="contact-social-label">Connect with me</p>
+				<div class="social-links">
+					<a class="social-link" href="https://www.linkedin.com/in/Caterina-Smith-/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+					<a class="social-link" href="https://github.com/CaterinaSmith-ultra" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+				</div>
+			</div>
 		</section>
 	</main>
 
 	<footer class="wrap">
-		<span>© <span id="year">2026</span> Caterina Smith. Built with curiosity.</span>
-		<div class="socials">
-			<a href="https://www.linkedin.com/in/Caterina-Smith-/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-			<a href="https://github.com/CaterinaSmith-ultra" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-		</div>
+		<span>© <span id="year">2026</span> Caterina Smith</span>
+
 	</footer>
 </body>
 </html>
