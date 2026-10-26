@@ -482,7 +482,7 @@ footer::before {
 
 .project:hover { 
 	transform: translateY(-4px); 
-	border-color: rgba(98, 240, 210, .55); 
+	border-color: #62f0d28c; 
 	box-shadow: 0 18px 55px rgba(0, 0, 0, .25), 0 0 32px rgba(98, 240, 210, .22), 0 0 70px rgba(98, 240, 210, .1); 
 }
 
@@ -587,7 +587,7 @@ footer::before {
 }
 
 .project:focus-within { 
-	border-color: rgba(98, 240, 210, .4); 
+	border-color: #62f0d266; 
 }
 
 
